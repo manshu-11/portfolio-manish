@@ -3,21 +3,58 @@
   height: 100%;
   display: flex;
   align-items: center;
-  color: #fff;
-  z-index: 1;
+  color: #e5e7eb;
+  z-index: 100;
+  gap: 10px;
 }
 .user-box {
   width: 60px;
   height: 60px;
-  border: 1px solid #ff0000;
   border-radius: 50%;
   flex-shrink: 0;
+  overflow: hidden;
 }
-.email-phone-Box {
-  position: relative;
+.user-box img {
+  width: 100%;
+  height: auto;
+}
+.header-box .name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d1fae5 /*var(--text-color)*/;
 }
 .email-phone-Box {
   position: relative;
   display: flex;
-  flex-shrink: 0;
+  gap: 10px;
+}
+
+.user-details-box .gap {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.user-details-box .icon-height {
+  height: 16px;
+}
+.user-details-box .icon-text {
+  color: #38bdf8 /*var(--icon-hover-color)*/;
+  font-size: 0.8rem;
+  height: 16px;
+  vertical-align: middle;
+  padding-bottom: 6px;
+  text-decoration: none;
+}
+.user-details-box .icon-text:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+@media all and (max-width: 676px) {
+  .header-box .name {
+    font-size: 1rem;
+  }
+  .user-box {
+    width: 50px;
+    height: 50px;
+  }
 }

@@ -14,24 +14,31 @@
   height: 100dvh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   position: fixed;
   left: 0;
   top: 0;
+  padding: 75px 0 40px 0;
 }
 .comp-area {
   max-width: 1200px;
-  max-height: 650px;
-  height: 80vh;
+  height: 100%;
   border: 1px solid #1b1b1b;
   border-radius: 10px;
   width: 80vw;
 }
 .headerBox {
-  width: 40vw;
+  width: 365px;
   height: 60px;
-  border: 1px solid #fff;
   position: fixed;
   top: 5px;
-  right: 10px;
+  right: 10%;
+  z-index: 1;
+}
+
+@media all and (max-width: 676px) {
+  .headerBox {
+    right: auto;
+    left: 5px;
+  }
 }

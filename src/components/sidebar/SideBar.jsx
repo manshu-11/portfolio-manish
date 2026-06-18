@@ -17,7 +17,7 @@ const SideBar = ({ menuButtonAction, status }) => {
     padding: "8px 10px",
   };
   return (
-    <div className={`sideBar ${status ? "close" : "open"}`}>
+    <div className={`sideBar ${status ? "open" : "close"}`}>
       {compButton.map((ele) => {
         return (
           <Button key={ele} action={menuButtonAction} style={buttonStyle}>
