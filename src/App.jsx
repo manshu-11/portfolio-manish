@@ -6,11 +6,13 @@ import { useState } from "react";
 import Header from "./components/header/Header";
 function App() {
   const [menuToggle, setMenuToggle] = useState(false);
+  const [currentComp, setCurrentComp] = useState(null);
   const [over, setOver] = useState(false);
   const handleMenu = () => {
     setMenuToggle((preState) => !preState);
   };
-  const handleMenuButton = () => {
+  const handleMenuButton = (ele) => {
+    setCurrentComp(ele);
     setMenuToggle(false);
   };
   return (
@@ -22,6 +24,7 @@ function App() {
         menuButtonAction={handleMenuButton}
         status={menuToggle}
         overState={over}
+        currentTitle={currentComp}
       />
       <div className="menu-button-box">
         <Button action={handleMenu}>

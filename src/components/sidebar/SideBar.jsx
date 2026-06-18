@@ -3,14 +3,13 @@ import "./sidebar.css";
 import Button from "../button/Button";
 import { BsBackpack } from "react-icons/bs";
 import { LuSquareArrowRight } from "react-icons/lu";
-const SideBar = ({ menuButtonAction, status }) => {
+const SideBar = ({ menuButtonAction, currentTitle, status }) => {
   const [compButton, setCompButton] = useState(
     Array.from(
       { length: 50 },
       (_, i) => "Component " + (i + 1).toString().padStart(2, "0"),
     ),
   );
-  console.log(compButton);
   const buttonStyle = {
     width: "100%",
     color: "var(--text-color)",
@@ -21,7 +20,12 @@ const SideBar = ({ menuButtonAction, status }) => {
       <aside className="menu-list">
         {compButton.map((ele) => {
           return (
-            <Button key={ele} action={menuButtonAction} style={buttonStyle}>
+            <Button
+              key={ele}
+              action={() => menuButtonAction(ele)}
+              style={buttonStyle}
+              isSelected={currentTitle === ele}
+            >
               <span className="buttonText">{ele}</span>
               <span>
                 <LuSquareArrowRight

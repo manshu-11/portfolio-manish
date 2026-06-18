@@ -8,3 +8,6 @@ button {
   align-items: center;
   justify-content: center;
 }
+button.selected {
+  color: var(--icon-hover-color) !important;
+}
