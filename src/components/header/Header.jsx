@@ -19,10 +19,10 @@ const Header = () => {
           <span>
             <a
               className="icon-text"
-              href="https://www.google.com/"
+              href="https://www.linkedin.com/in/manish-bonde/"
               target="_blank"
             >
-              https://www.google.com/
+              https://www.linkedin.com/in/manish-bonde/
             </a>
           </span>
         </div>

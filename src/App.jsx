@@ -11,7 +11,7 @@ function App() {
     setMenuToggle((preState) => !preState);
   };
   const handleMenuButton = () => {
-    setMenuToggle(true);
+    setMenuToggle(false);
   };
   return (
     <main className="main">
@@ -34,7 +34,12 @@ function App() {
           />
         </Button>
       </div>
-      <section className="comp-box">
+      <section
+        className="comp-box"
+        onClick={(e) => {
+          setMenuToggle(false);
+        }}
+      >
         <div className="comp-area"></div>
       </section>
     </main>
